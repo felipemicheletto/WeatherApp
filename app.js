@@ -4,7 +4,7 @@ window.addEventListener('load',()=>{
     let temperatureDescription = document.querySelector('.temperature-description');
     let temperatureDegree = document.querySelector('.temperature-degree');
     let locationTimezone = document.querySelector('.location-timezone');
-    let temperatureSection = document.querySelector('.temperature');
+    let changeTemperature = document.querySelector('.button-temperature');
     const temperatureSpan = document.querySelector('.temperature span');
 
     if(navigator.geolocation){
@@ -31,7 +31,7 @@ window.addEventListener('load',()=>{
                 setIcons(icon, document.querySelector(".icon"));
 
                 // Change temperature to Celsius/Farenheit;
-                temperatureSection.addEventListener('click', () => {
+                changeTemperature.addEventListener('click', () => {
                     if (temperatureSpan.textContent === "F"){
                         temperatureSpan.textContent = "C";
                         temperatureDegree.textContent = Math.floor(celsius);
